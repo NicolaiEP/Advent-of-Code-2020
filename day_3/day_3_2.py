@@ -1,4 +1,4 @@
-with open("day_3.txt") as f:
+with open("day_3/day_3.txt") as f:
     terrain = tuple(line for line in f.read().splitlines())
 
 product = 1
