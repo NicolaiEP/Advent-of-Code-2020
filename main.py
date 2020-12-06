@@ -1,1 +1,1 @@
-from day_5 import day_5_1, day_5_2
+from day_6 import day_6_1, day_6_2
