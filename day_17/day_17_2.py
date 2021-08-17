@@ -88,7 +88,7 @@ print("FINISH\n")
 active_cells = {pos for pos, state in zip(positions, chain(*lines)) if state == "#"}
 
 
-for _ in range(6):
+for _ in range(ITERATION_COUNT):
     start_time = time.time()
     # checked_cells = set()
     new_cells = set()
@@ -125,7 +125,7 @@ print("FINISH\n")
 # APPROACH 3 (EVEN OLDER):
 state_dict = {pos: state for pos, state in zip(positions, chain(*lines))}
 
-for _ in range(6):
+for _ in range(ITERATION_COUNT):
     start_time = time.time()
     new_state = state_dict.copy()
 
