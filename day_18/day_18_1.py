@@ -14,7 +14,7 @@ def shunting_yard(expr):
         if token.isnumeric():
             output.append(token)
         elif token in ("+", "*"):
-            if operator_stack and operator_stack[-1] != "(":
+            while operator_stack and operator_stack[-1] != "(":
                 output.append(operator_stack.pop())
             operator_stack.append(token)
         elif token == "(":
@@ -26,8 +26,8 @@ def shunting_yard(expr):
             assert operator_stack[-1] == "("
             operator_stack.pop()
 
-    for operator in operator_stack:
-        output.append(operator)
+    while operator_stack:
+        output.append(operator_stack.pop())
 
     return output
 
